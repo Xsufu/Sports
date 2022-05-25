@@ -58,7 +58,9 @@ class SportsListFragment : Fragment() {
         adapter.submitList(sportsViewModel.sportsData)
 
         val slidingPaneLayout = binding.slidingPaneLayout
-
+        /* Блокировка жестов
+        slidingPaneLayout.lockMode = SlidingPaneLayout.LOCK_MODE_LOCKED
+        */
         //Соединение SlidingPaneLayout с системной кнопкой возврата
         requireActivity().onBackPressedDispatcher.addCallback(
             viewLifecycleOwner,
